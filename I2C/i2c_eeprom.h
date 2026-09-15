@@ -1,0 +1,16 @@
+//i2c_eeprom.h
+#include "types.h"
+void i2c_eeprom_bytewrite(u8 slaveAddr,
+	                        u8 wBuffAddr,
+                          u8 dat); 
+
+u8 i2c_eeprom_randomread(u8 slaveAddr,u8 rBuffAddr) ;
+void i2c_eeprom_pagewrite(u8 slaveAddr,
+	                        u8  wBuffStartAddr,
+                          s8 *p,u8 nBytes); 
+
+
+void i2c_eeprom_seqread(u8 slaveAddr,
+	                      u8 rBuffStartAddr,
+                        s8 *p,
+                        u8 nBytes); 
